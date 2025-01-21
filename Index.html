@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calendar-container">
+        <div id="calendar">
+            <div id="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <div id="current-month"></div>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div id="calendar-days">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+            </div>
+            <div id="calendar-body"></div>
+        </div>
+
+        <div id="bookings-list">
+            <h3>Bookings</h3>
+            <ul id="bookings-ul"></ul>
+            <button id="view-bookings" style="display:none;">View Bookings</button>
+            <button id="make-booking" style="display:none;">Make a Booking</button>
+        </div>
+    </div>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2>Book a Slot</h2>
+            <label for="person-name">Your Name:</label>
+            <input type="text" id="person-name" placeholder="Enter your name">
+            <label for="slot-color">Choose color:</label>
+            <input type="color" id="slot-color" value="#ff0000">
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time">
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time">
+            <button id="book-slot">Book Slot</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
